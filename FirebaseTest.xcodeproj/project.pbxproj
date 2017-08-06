@@ -16,6 +16,8 @@
 		95382FA31F37C3D20017918F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95382FA11F37C3D20017918F /* LaunchScreen.storyboard */; };
 		95382FAE1F37C3D20017918F /* FirebaseTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95382FAD1F37C3D20017918F /* FirebaseTestTests.m */; };
 		95382FB91F37C3D20017918F /* FirebaseTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95382FB81F37C3D20017918F /* FirebaseTestUITests.m */; };
+		95382FC81F37C8620017918F /* GoogleService-Info_enterprise.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95382FC61F37C8620017918F /* GoogleService-Info_enterprise.plist */; };
+		95382FC91F37C8620017918F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95382FC71F37C8620017918F /* GoogleService-Info.plist */; };
 		A1A78A0BD3967AE948111FF6 /* libPods-FirebaseTestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ABC2916428DB18E33C86AE /* libPods-FirebaseTestUITests.a */; };
 		CC67524BD956AE53A8E6AD5A /* libPods-FirebaseTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F58AB5C8B183C377F983EF9 /* libPods-FirebaseTestTests.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		95382FB41F37C3D20017918F /* FirebaseTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95382FB81F37C3D20017918F /* FirebaseTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirebaseTestUITests.m; sourceTree = "<group>"; };
 		95382FBA1F37C3D20017918F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95382FC61F37C8620017918F /* GoogleService-Info_enterprise.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info_enterprise.plist"; sourceTree = "<group>"; };
+		95382FC71F37C8620017918F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4E9BBFD0832FA28E555B31F /* Pods-FirebaseTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseTest/Pods-FirebaseTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +153,8 @@
 				95382F9F1F37C3D20017918F /* Assets.xcassets */,
 				95382FA11F37C3D20017918F /* LaunchScreen.storyboard */,
 				95382FA41F37C3D20017918F /* Info.plist */,
+				95382FC61F37C8620017918F /* GoogleService-Info_enterprise.plist */,
+				95382FC71F37C8620017918F /* GoogleService-Info.plist */,
 				95382F931F37C3D20017918F /* Supporting Files */,
 			);
 			path = FirebaseTest;
@@ -256,7 +262,7 @@
 				TargetAttributes = {
 					95382F8F1F37C3D20017918F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = TGZ55WNWSB;
+						DevelopmentTeam = LLSV39R9YJ;
 						ProvisioningStyle = Automatic;
 					};
 					95382FA81F37C3D20017918F = {
@@ -298,7 +304,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95382FC81F37C8620017918F /* GoogleService-Info_enterprise.plist in Resources */,
 				95382FA31F37C3D20017918F /* LaunchScreen.storyboard in Resources */,
+				95382FC91F37C8620017918F /* GoogleService-Info.plist in Resources */,
 				95382FA01F37C3D20017918F /* Assets.xcassets in Resources */,
 				95382F9E1F37C3D20017918F /* Main.storyboard in Resources */,
 			);
@@ -617,10 +625,11 @@
 			baseConfigurationReference = C4E9BBFD0832FA28E555B31F /* Pods-FirebaseTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TGZ55WNWSB;
+				DEVELOPMENT_TEAM = LLSV39R9YJ;
 				INFOPLIST_FILE = FirebaseTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = anna.FirebaseTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.picsart.studio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -630,10 +639,11 @@
 			baseConfigurationReference = 376002926FAE9720DFB38C7F /* Pods-FirebaseTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TGZ55WNWSB;
+				DEVELOPMENT_TEAM = LLSV39R9YJ;
 				INFOPLIST_FILE = FirebaseTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = anna.FirebaseTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.picsart.studio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -711,6 +721,7 @@
 				95382FBF1F37C3D20017918F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95382FC01F37C3D20017918F /* Build configuration list for PBXNativeTarget "FirebaseTestTests" */ = {
 			isa = XCConfigurationList;
@@ -719,6 +730,7 @@
 				95382FC21F37C3D20017918F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95382FC31F37C3D20017918F /* Build configuration list for PBXNativeTarget "FirebaseTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -727,6 +739,7 @@
 				95382FC51F37C3D20017918F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

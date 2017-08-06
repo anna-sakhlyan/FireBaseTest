@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Xp-mm-BK2">
+                                <rect key="frame" x="142" y="296" width="90" height="75"/>
+                                <color key="backgroundColor" red="1" green="0.25425646549999997" blue="0.56470317640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="hGh-mt-FdP"/>
+                                    <constraint firstAttribute="width" secondItem="8Xp-mm-BK2" secondAttribute="height" multiplier="6:5" id="qjp-By-pFd"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Regenerate">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="regenerateToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnE-bu-4mn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVh-Cu-TWL">
+                                <rect key="frame" x="142" y="213" width="90" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="IBU-A3-Zic"/>
+                                    <constraint firstAttribute="width" secondItem="VVh-Cu-TWL" secondAttribute="height" multiplier="45:17" id="Wqs-Pr-F8V"/>
+                                </constraints>
+                                <state key="normal" title="Token"/>
+                                <connections>
+                                    <action selector="getToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gvk-em-9iG"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c4J-rJ-wDI">
+                                <rect key="frame" x="0.0" y="45" width="375" height="136"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="AZE-Z1-uqW"/>
+                                    <constraint firstAttribute="width" secondItem="c4J-rJ-wDI" secondAttribute="height" multiplier="375:136" id="XGM-h5-7hO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VVh-Cu-TWL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="193" id="2J5-Yd-2M9"/>
+                            <constraint firstItem="8Xp-mm-BK2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N0K-ea-N9g"/>
+                            <constraint firstItem="c4J-rJ-wDI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="b7h-LF-lfG"/>
+                            <constraint firstItem="VVh-Cu-TWL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyb-X3-krA"/>
+                            <constraint firstItem="8Xp-mm-BK2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hOl-cj-KzN"/>
+                            <constraint firstItem="c4J-rJ-wDI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zlW-jD-h0K"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="token" destination="c4J-rJ-wDI" id="F2j-Pc-2g3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="3.1484257871064472"/>
         </scene>
     </scenes>
 </document>

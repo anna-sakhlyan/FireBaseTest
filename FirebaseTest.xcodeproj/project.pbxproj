@@ -66,6 +66,7 @@
 		95382FBA1F37C3D20017918F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95382FC61F37C8620017918F /* GoogleService-Info_enterprise.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info_enterprise.plist"; sourceTree = "<group>"; };
 		95382FC71F37C8620017918F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95B1BB0A1F37D78D00F670D0 /* FirebaseTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseTest.entitlements; sourceTree = "<group>"; };
 		C4E9BBFD0832FA28E555B31F /* Pods-FirebaseTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseTest/Pods-FirebaseTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +146,7 @@
 		95382F921F37C3D20017918F /* FirebaseTest */ = {
 			isa = PBXGroup;
 			children = (
+				95B1BB0A1F37D78D00F670D0 /* FirebaseTest.entitlements */,
 				95382F961F37C3D20017918F /* AppDelegate.h */,
 				95382F971F37C3D20017918F /* AppDelegate.m */,
 				95382F991F37C3D20017918F /* ViewController.h */,
@@ -264,6 +266,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = LLSV39R9YJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					95382FA81F37C3D20017918F = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -625,6 +635,7 @@
 			baseConfigurationReference = C4E9BBFD0832FA28E555B31F /* Pods-FirebaseTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseTest/FirebaseTest.entitlements;
 				DEVELOPMENT_TEAM = LLSV39R9YJ;
 				INFOPLIST_FILE = FirebaseTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -639,6 +650,7 @@
 			baseConfigurationReference = 376002926FAE9720DFB38C7F /* Pods-FirebaseTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseTest/FirebaseTest.entitlements;
 				DEVELOPMENT_TEAM = LLSV39R9YJ;
 				INFOPLIST_FILE = FirebaseTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

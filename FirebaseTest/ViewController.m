@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+@import Firebase;
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *token;
 
 @end
 
@@ -19,6 +21,14 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)regenerateToken:(id)sender {
+    [[FIRInstanceID instanceID] deleteIDWithHandler:^(NSError * _Nullable error) {
+        NSString *token = [FIRMessaging messaging].FCMToken;
+    }];
+}
+- (IBAction)getToken:(id)sender {
+    self.token.text = [FIRMessaging messaging].FCMToken;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
